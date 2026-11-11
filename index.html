@@ -1,21 +1,106 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ahmad Iqbal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Iqbal | ahmads.build</title>
   <style>
-    body { font-family: Georgia, serif; max-width: 600px; margin: 80px auto; padding: 0 20px; line-height: 1.6; color: #222; }
-    h1 { font-weight: normal; letter-spacing: 2px; }
-    a.button { display: inline-block; margin-top: 16px; padding: 12px 20px; background: #222; color: #fff; text-decoration: none; border-radius: 6px; }
-    a { color: #222; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .logo { font-weight: 700; font-size: 18px; color: #1a1a1a; text-decoration: none; }
+    .nav-links { display: flex; align-items: center; gap: 16px; }
+    .nav-links a { color: #1a1a1a; text-decoration: none; font-size: 15px; }
+    .nav-links a:hover { text-decoration: underline; }
+    .nav-links a.btn {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .nav-links a.btn:hover { background: #333; text-decoration: none; }
+    main { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+    h1 { font-size: 40px; line-height: 1.2; margin-bottom: 20px; }
+    .intro { font-size: 19px; color: #444; margin-bottom: 56px; }
+    .cards { display: grid; gap: 16px; }
+    .card {
+      display: block;
+      background: #fff;
+      border: 1px solid #e5e2dc;
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: #1a1a1a;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: #1a1a1a; }
+    .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .card h2 { font-size: 20px; }
+    .card p { color: #555; font-size: 16px; }
+    .tag {
+      font-size: 12px;
+      font-weight: 600;
+      background: #f0ede7;
+      color: #6b6558;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    footer { text-align: center; padding: 40px 24px; color: #888; font-size: 14px; }
+    @media (max-width: 520px) {
+      h1 { font-size: 30px; }
+      .nav-links { gap: 12px; }
+      .nav-links a.btn { padding: 8px 12px; font-size: 14px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Ahmad Iqbal</h1>
-  <p>Building one AI agent a week, in public.</p>
-  <p>Former Canva GM for the Middle East, North Africa and Pakistan, and Canva's first generative AI product manager.</p>
-  <a class="button" href="https://calendar.app.google/eyq7kdaJQFksBSvc8">Book an office hours chat</a>
-  <p style="margin-top: 32px;"><a href="https://www.linkedin.com/in/ahmadiqbal1">LinkedIn</a></p>
+
+  <nav>
+    <a href="/" class="logo">Ahmad Iqbal</a>
+    <div class="nav-links">
+      <a href="https://www.linkedin.com/in/ahmadiqbal1" target="_blank">LinkedIn</a>
+      <a href="/office-hours" class="btn">Book office hours</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Hi, I'm Ahmad.</h1>
+    <p class="intro">
+      I was Canva's first AI product manager, leading the zero-to-one launch of
+      Canva's first AI products, and later GM for MENAP. Now I'm on sabbatical,
+      building one AI agent a week, in public.
+    </p>
+
+    <div class="cards">
+      <a href="/writing" class="card">
+        <div class="card-top"><h2>Writing</h2><span class="tag">Coming soon</span></div>
+        <p>Weekly notes on what I'm building and learning.</p>
+      </a>
+      <a href="/builds" class="card">
+        <div class="card-top"><h2>Builds</h2><span class="tag">Coming soon</span></div>
+        <p>The agents and apps I've shipped, with demos you can try.</p>
+      </a>
+      <a href="/resources" class="card">
+        <div class="card-top"><h2>Resources</h2><span class="tag">Coming soon</span></div>
+        <p>Templates and guides to build your own agents.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer>ahmads.build</footer>
+
 </body>
 </html>
